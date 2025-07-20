@@ -55,13 +55,14 @@ export const ApiKeyInput = ({ onApiKeySet }: ApiKeyInputProps) => {
                 className="h-16 w-auto"
               />
             </div>
-            <div className="flex items-center justify-center">
-              <Key className="h-8 w-8 text-primary mr-2" />
+            <div className="space-y-2">
+              <h1 className="text-2xl font-bold text-foreground animate-float">
+                Welcome to OpenRouter AI 🚀
+              </h1>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Please enter your OpenRouter API key to access the document extraction solution
+              </p>
             </div>
-            <CardTitle className="text-xl">API Key Required</CardTitle>
-            <p className="text-muted-foreground text-sm">
-              Please enter your OpenRouter API key to use the document extraction service
-            </p>
           </CardHeader>
           
           <CardContent>
