@@ -57,10 +57,12 @@ export const ApiKeyInput = ({ onApiKeySet }: ApiKeyInputProps) => {
             </div>
             <div className="space-y-2">
               <h1 className="text-2xl font-bold text-foreground animate-float">
-                Welcome to OpenRouter AI 🚀
+                Welcome to the OCI Document Extraction Solution
               </h1>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Please enter your OpenRouter API key to access the document extraction solution
+                This AI-powered document extraction solution runs on the LLaMA 4 Maverick LLM, one of the most advanced models available on OpenRouter.
+                <br /><br />
+                To begin using the features of this project, please sign in with your OpenRouter API key.
               </p>
             </div>
           </CardHeader>
