@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Pink-Purple Gradient Theme */
+    --background: 330 100% 98%;
+    --foreground: 260 15% 8%;
+    --card: 340 100% 99%;
+    --card-foreground: 260 15% 8%;
+    --popover: 340 100% 99%;
+    --popover-foreground: 260 15% 8%;
+    --primary: 300 76% 72%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 320 100% 95%;
+    --secondary-foreground: 260 15% 8%;
+    --muted: 320 50% 92%;
+    --muted-foreground: 260 5% 45%;
+    --accent: 310 100% 89%;
+    --accent-foreground: 260 15% 8%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 320 30% 85%;
+    --input: 320 30% 85%;
+    --ring: 300 76% 72%;
+    --radius: 0.75rem;
+    
+    /* Custom gradient backgrounds */
+    --gradient-primary: linear-gradient(135deg, hsl(340, 100%, 85%) 0%, hsl(260, 100%, 75%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(320, 100%, 92%) 0%, hsl(280, 100%, 88%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(300, 100%, 80%) 0%, hsl(280, 100%, 70%) 100%);
+    
+    /* Glow effects */
+    --glow-primary: 0 0 30px hsl(300, 76%, 72%, 0.3);
+    --glow-secondary: 0 0 20px hsl(320, 100%, 80%, 0.4);
+
+    --sidebar-background: 340 100% 99%;
+    --sidebar-foreground: 260 15% 8%;
+    --sidebar-primary: 300 76% 72%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 320 100% 95%;
+    --sidebar-accent-foreground: 260 15% 8%;
+    --sidebar-border: 320 30% 85%;
+    --sidebar-ring: 300 76% 72%;
+  }
+
+  .dark {
+    /* Dark theme with pink-purple gradient */
+    --background: 260 15% 8%;
+    --foreground: 340 100% 95%;
+    --card: 260 20% 12%;
+    --card-foreground: 340 100% 95%;
+    --popover: 260 20% 12%;
+    --popover-foreground: 340 100% 95%;
+    --primary: 300 76% 72%;
+    --primary-foreground: 260 15% 8%;
+    --secondary: 260 15% 18%;
+    --secondary-foreground: 340 100% 95%;
+    --muted: 260 10% 20%;
+    --muted-foreground: 340 30% 70%;
+    --accent: 300 50% 25%;
+    --accent-foreground: 340 100% 95%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 260 15% 25%;
+    --input: 260 15% 25%;
+    --ring: 300 76% 72%;
+    
+    /* Dark gradient backgrounds */
+    --gradient-primary: linear-gradient(135deg, hsl(300, 50%, 20%) 0%, hsl(260, 50%, 15%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(280, 30%, 18%) 0%, hsl(260, 30%, 12%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(300, 60%, 30%) 0%, hsl(280, 60%, 25%) 100%);
+
+    --sidebar-background: 260 20% 12%;
+    --sidebar-foreground: 340 100% 95%;
+    --sidebar-primary: 300 76% 72%;
+    --sidebar-primary-foreground: 260 15% 8%;
+    --sidebar-accent: 260 15% 18%;
+    --sidebar-accent-foreground: 340 100% 95%;
+    --sidebar-border: 260 15% 25%;
+    --sidebar-ring: 300 76% 72%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    background: var(--gradient-primary);
+    color: hsl(var(--foreground));
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+  }
+}
+
+/* Animation utilities */
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: var(--glow-primary); }
+  50% { box-shadow: var(--glow-secondary); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes slide-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typewriter 2s steps(30, end);
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-slide-in-up {
+  animation: slide-in-up 0.6s ease-out;
+}
