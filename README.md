@@ -38,7 +38,7 @@ This demo is strictly intended for internal use by the:
 > **Oracle EMEA AI Center of Excellence (AICOE) Team**
 
 It may be presented to Oracle customers by AICOE team members as part of innovation sessions, workshops, or discovery engagements.  
-Any reuse, modification, or deployment outside the AICOE team must be discussed with the project author.
+Any reuse, modification, or deployment outside the AICOE team must be agreed with the AICOE Management.
 
 ---
 
@@ -63,7 +63,7 @@ This flow showcases how **AI + OIC + Autonomous Database** work together to enab
 - **Styling**: Tailwind CSS
 - **Build Tools**: TypeScript, Vite
 - **AI Services**: Multimodal LLMs (Llama 4 Maverick leevraged through OpenRouter API)
-- **Integration**: Oracle Integration Cloud (OIC)
-- **Storage**: Oracle Data Lakehouse (Autonomous Database, 23AI)
+- **Integration**: Oracle Integration Cloud (OIC) - For Production (Not part of this demo)
+- **Storage**: Oracle Data Lakehouse (Autonomous Database, 23AI) - For Production (Not part of this demo)
 
 ---
